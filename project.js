@@ -1,4 +1,10 @@
-document.addEventListener('DOMContentLoaded', function(){
+$(function(){
 
+	$(window).scroll(function(){
+		
+	});
+
+	$(".header").scroll(function(){
+
+	});
 });
-
