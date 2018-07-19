@@ -23,9 +23,7 @@ body {
     padding: 30px;
     text-align: center;
     background: white;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
+
 }
 
 .header h1 {
