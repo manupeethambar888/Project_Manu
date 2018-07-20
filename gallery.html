@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="project.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="project.js"></script>
 </head>
@@ -19,39 +20,61 @@
 	<div class="topnav">
 	  <a href="index.html">Home</a>
 	  <a href="about.html">About Me</a>
-	  <a href="gallery.html">Photo Gallery</a>
+	  <a href="gallery.html" class="active">Photo Gallery</a>
 	  <a href="contact.html" style="float:right">Contact</a>
 	</div>
 
 	<div class="row">
-	  <div class="leftcolumn">
 	    <div class="card">
+		  <!-- Photo grid (modal) -->
+		  <div class="w3-row-padding">
+		    <div class="w3-half">
+		      <img src="images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+		      <img src="images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+		      <img src="images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+		    </div>
 
+		    <div class="w3-half">
+		      <img src="images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+		      <img src="images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+		      <img src="images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+		    </div>
+		  </div>
+
+		  <!-- Modal for full size images on click-->
+		  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+		    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+		    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+		      <img id="img01" class="w3-image">
+		      <p id="caption"></p>
+		    </div>
+		  </div>
 	    </div>
-	  </div>
-	  <div class="rightcolumn">
-	    <div class="card">
-	      <h2>About Me</h2>
-	      <div class="fakeimg" style="height:100px;">Image</div>
-	      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-	    </div>
-	    <div class="card">
-	      <h3>Popular Post</h3>
-	      <div class="fakeimg"><p>Image</p></div>
-	      <div class="fakeimg"><p>Image</p></div>
-	      <div class="fakeimg"><p>Image</p></div>
-	    </div>
-	    <div class="card">
-	      <h3>Follow Me</h3>
-	      <p>Some text..</p>
-	    </div>
-	  </div>
 	</div>
 
 	<div class="footer">
 	  <h2>Footer</h2>
 	</div>
 </div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
 
 </body>
 </html>
