@@ -37,7 +37,7 @@ body {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 1;
 }
 
 /* Style the topnav links */
@@ -82,6 +82,13 @@ body {
     background-color: #aaa;
     width: 100%;
     padding: 20px;
+}
+
+/* Profile photo */
+.profile-photo {
+    background-image: url("images/Manu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /* Add a card effect for articles */
